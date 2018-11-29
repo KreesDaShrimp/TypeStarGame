@@ -567,7 +567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1017828926}
-  nextRoom: Level_01
+  nextRoom: Main Menu
 --- !u!114 &1017828926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -693,7 +693,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 1413648082}
-  audio: {fileID: 0}
 --- !u!114 &1413648082
 MonoBehaviour:
   m_ObjectHideFlags: 0
