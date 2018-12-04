@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class audioSlider : MonoBehaviour {
 
@@ -16,12 +17,11 @@ public class audioSlider : MonoBehaviour {
     void Start () {
         audioObject = GameObject.FindGameObjectWithTag("music");
         audio = audioObject.GetComponent<AudioSource>();
-        slider.value = 100;
+        slider.value = audio.volume*100;
         startVal = slider.value;
-        
-
 		
 	}
+
 	
 	// Update is called once per frame
 	void Update () {
@@ -33,4 +33,5 @@ public class audioSlider : MonoBehaviour {
         }
 		
 	}
+    
 }
