@@ -39,8 +39,8 @@ public class WordGenerator : MonoBehaviour
 
     private void Update()
     {
-        displayedText = HardRandomWords();
-        textBox.text = displayedText;
+        // displayedText = HardRandomWords();
+        // textBox.text = displayedText;
     }
 
     public string EasyRandomWords()
