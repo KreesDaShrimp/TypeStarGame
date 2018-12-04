@@ -25,9 +25,9 @@ public class WordGenerator : MonoBehaviour
                                 "Astronaut", "Galileo", "Enterprise", "Pathfinder",
                                 "Andromeda", "Astrophysics", "Celestial", "Heliocentric",
                                 "Interstellar", "Syzygy", "Transneptunian", "Rocket Raccoon",
-                                "Frustum", "Adumbration"};
+                                "Frustum"};
 
-   public string displayedText;
+    string displayedText;
     Text textBox;
 
     private void Start()
@@ -40,6 +40,7 @@ public class WordGenerator : MonoBehaviour
     private void Update()
     {
         displayedText = HardRandomWords();
+        textBox.text = displayedText;
     }
 
     public string EasyRandomWords()
