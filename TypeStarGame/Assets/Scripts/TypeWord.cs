@@ -37,9 +37,7 @@ public class TypeWord : MonoBehaviour
 
                 if (currentText.text.Length < 1)
                 {
-                    ufoList[i].SetActive(false);
-                    ufoList.Remove(ufoList[i]);
-                    wordActivated = false;
+                    DestroyUFO(ufoList[i]);
                 }
                 else
                 {
@@ -75,5 +73,11 @@ public class TypeWord : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         ufoList.Add(collision.gameObject);
+    }
+    public void DestroyUFO(GameObject ufoToDestroy)
+    {
+        ufoToDestroy.SetActive(false);
+        ufoList.Remove(ufoToDestroy);
+        wordActivated = false;
     }
 }
