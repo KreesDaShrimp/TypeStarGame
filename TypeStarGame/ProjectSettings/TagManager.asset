@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - music
+  - Life1
+  - Life2
+  - Life3
   layers:
   - Default
   - TransparentFX
