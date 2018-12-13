@@ -32,7 +32,7 @@ public class Lives : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-
+        Debug.Log("Collided!");
         lives--;
 
         

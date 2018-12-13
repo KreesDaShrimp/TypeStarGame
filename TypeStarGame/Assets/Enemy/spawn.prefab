@@ -36,7 +36,7 @@ Transform:
   m_GameObject: {fileID: 1004649228035820}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.74, y: 1.06, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -52,8 +52,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd9442e3985bc9e4ab8f18be26497325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ufo: {fileID: 4450607652874526, guid: 1591680195715604da5105fdf683ccfe, type: 2}
-  SpawnRate: 2
+  ufo: {fileID: 4915253380165930, guid: 20a7757bb22bf7b4789ef65b8df7b345, type: 2}
+  SpawnRate: 8
   IntialSpawnRate: 1
 --- !u!212 &212639032896551898
 SpriteRenderer:

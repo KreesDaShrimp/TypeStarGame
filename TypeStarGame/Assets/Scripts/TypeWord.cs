@@ -33,20 +33,22 @@ public class TypeWord : MonoBehaviour
         {
             for (int i = 0; i < ufoList.Count; i++)
             {
-                Text currentText = ufoList[i].GetComponentInChildren<Text>();
-
-                if (currentText.text.Length < 1)
+                if (ufoList[i] != null)
                 {
-                    DestroyUFO(ufoList[i]);
-                }
-                else
-                {
-                    string currentString = currentText.text;
-
-                    if (currentString[0] == typedLetter && !wordActivated)
+                    Text currentText = ufoList[i].GetComponentInChildren<Text>();
+                    if (currentText.text.Length < 1)
                     {
-                        activeWord = ufoList[i];
-                        wordActivated = true;
+                        DestroyUFO(ufoList[i]);
+                    }
+                    else
+                    {
+                        string currentString = currentText.text;
+
+                        if (currentString[0] == typedLetter && !wordActivated)
+                        {
+                            activeWord = ufoList[i];
+                            wordActivated = true;
+                        }
                     }
                 }
             }
@@ -72,12 +74,16 @@ public class TypeWord : MonoBehaviour
     // adds UFO object to list
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        ufoList.Add(collision.gameObject);
+        if (collision.gameObject.tag == "UFO")
+        {
+            ufoList.Add(collision.gameObject);
+        }
     }
     public void DestroyUFO(GameObject ufoToDestroy)
     {
         ufoToDestroy.SetActive(false);
         ufoList.Remove(ufoToDestroy);
+        Destroy(ufoToDestroy);
         wordActivated = false;
     }
 }
