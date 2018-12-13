@@ -21,9 +21,10 @@ public class EnBehavior : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-
-        Destroy(gameObject);
-        
-
+        if (coll.gameObject.tag == "Player")
+        {
+            Debug.Log("Collision destroyed " + coll.gameObject + " after hitting " + coll.gameObject.name);
+            Destroy(gameObject);
+        }
     }
 }

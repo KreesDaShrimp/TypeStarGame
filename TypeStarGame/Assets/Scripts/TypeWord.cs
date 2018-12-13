@@ -83,6 +83,7 @@ public class TypeWord : MonoBehaviour
     {
         ufoToDestroy.SetActive(false);
         ufoList.Remove(ufoToDestroy);
+        Debug.Log("Destroyed " + ufoToDestroy);
         Destroy(ufoToDestroy);
         wordActivated = false;
     }
