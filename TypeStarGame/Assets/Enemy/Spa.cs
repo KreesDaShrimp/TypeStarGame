@@ -20,8 +20,17 @@ public class Spa : MonoBehaviour {
 
     void spawn()
     {
+        if (Time.timeScale == 0)
+        {
 
-        Instantiate(ufo, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+            
+        }
+        else
+        {
+            Instantiate(ufo, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+            
+        }
+       
 
     }
 
