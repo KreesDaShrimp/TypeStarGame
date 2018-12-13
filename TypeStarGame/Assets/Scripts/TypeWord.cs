@@ -7,6 +7,8 @@ public class TypeWord : MonoBehaviour
 {
     public Text ScoreText;
     public AudioSource UFOExplosion;
+    public AudioSource Typing;
+    public AudioSource BadSelect;
 
     private Color defaultColor = Color.white;
     private Color typingColor = new Color(0.4f, 0.8f, 1.0f);
@@ -68,6 +70,7 @@ public class TypeWord : MonoBehaviour
             Debug.Log(currentString);
             if (currentString[0] == typedLetter)
             {
+                Typing.Play();
                 currentString = currentString.Remove(0, 1);
                 currentText.text = currentString;
                 typedLetter = ' ';
