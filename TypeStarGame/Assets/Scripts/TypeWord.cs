@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class TypeWord : MonoBehaviour
 {
+    public Text ScoreText;
+
     private Color defaultColor = Color.white;
     private Color typingColor = new Color(0.4f, 0.8f, 1.0f);
     private Color wrongColor = Color.red;
@@ -14,6 +16,7 @@ public class TypeWord : MonoBehaviour
     private char typedLetter;
     private GameObject activeWord;
     private bool wordActivated;
+    private int score;
 
     private void Start()
     {
@@ -86,5 +89,7 @@ public class TypeWord : MonoBehaviour
         Debug.Log("Destroyed " + ufoToDestroy);
         Destroy(ufoToDestroy);
         wordActivated = false;
+        score = score + 50;
+        ScoreText.text = "Score: " + score.ToString();
     }
 }

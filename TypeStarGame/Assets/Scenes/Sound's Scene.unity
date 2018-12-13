@@ -145,7 +145,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -680, y: 360}
+  m_AnchoredPosition: {x: -137, y: 41}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &45989027
@@ -198,6 +198,7 @@ GameObject:
   - component: {fileID: 366802607}
   - component: {fileID: 366802609}
   - component: {fileID: 366802608}
+  - component: {fileID: 366802610}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -220,7 +221,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -680, y: 420}
+  m_AnchoredPosition: {x: -137, y: 101}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &366802608
@@ -263,6 +264,18 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 366802606}
   m_CullTransparentMesh: 0
+--- !u!114 &366802610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 366802606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 307f6320b0f06974aa12d2a244c99e7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScoreText: {fileID: 366802608}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,7 +554,7 @@ Prefab:
         type: 2}
       propertyPath: ufo
       value: 
-      objectReference: {fileID: 224630285622787280, guid: 843441aebe4d58e419cde870435b0b35,
+      objectReference: {fileID: 4062044741011470, guid: 034276107d5505446b950b1cff85afb1,
         type: 2}
     - target: {fileID: 114721562168427888, guid: 034276107d5505446b950b1cff85afb1,
         type: 2}
@@ -650,7 +663,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -680, y: 480}
+  m_AnchoredPosition: {x: -137, y: 161}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1402778485
@@ -910,6 +923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 307f6320b0f06974aa12d2a244c99e7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScoreText: {fileID: 366802608}
 --- !u!61 &2055321642
 BoxCollider2D:
   m_ObjectHideFlags: 0
