@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class TypeWord : MonoBehaviour
 {
     public Text ScoreText;
+    public AudioSource UFOExplosion;
 
     private Color defaultColor = Color.white;
     private Color typingColor = new Color(0.4f, 0.8f, 1.0f);
@@ -91,5 +92,11 @@ public class TypeWord : MonoBehaviour
         wordActivated = false;
         score = score + 50;
         ScoreText.text = "Score: " + score.ToString();
+        UFOExplosion.Play();
+        Debug.Log(GetScore());
+    }
+    public int GetScore()
+    {
+        return score;
     }
 }
