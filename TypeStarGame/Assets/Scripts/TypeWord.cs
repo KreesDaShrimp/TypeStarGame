@@ -93,5 +93,10 @@ public class TypeWord : MonoBehaviour
         score = score + 50;
         ScoreText.text = "Score: " + score.ToString();
         UFOExplosion.Play();
+        Debug.Log(GetScore());
+    }
+    public int GetScore()
+    {
+        return score;
     }
 }
