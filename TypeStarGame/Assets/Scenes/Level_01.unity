@@ -788,8 +788,9 @@ GameObject:
   - component: {fileID: 445256532}
   - component: {fileID: 445256534}
   - component: {fileID: 445256533}
+  - component: {fileID: 445256535}
   m_Layer: 5
-  m_Name: Wave
+  m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -845,9 +846,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Wave: 0
-
-'
+  m_Text: 'Time: 0'
 --- !u!222 &445256534
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -855,6 +854,17 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 445256531}
   m_CullTransparentMesh: 0
+--- !u!114 &445256535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 445256531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37c76d5f61e755f4f9afee9a50bed7db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &473305432
 GameObject:
   m_ObjectHideFlags: 0
