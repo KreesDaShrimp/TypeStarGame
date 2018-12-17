@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour {
     private string text;
 	// Use this for initialization
 	void Start () {
-        currentTime = (int)Time.time;
+        currentTime = (int)Time.timeSinceLevelLoad;
         textObject = GetComponent<Text>();
         text = "Time: " + currentTime;
 	}
@@ -18,7 +18,7 @@ public class Timer : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        currentTime = (int)Time.time;
+        currentTime = (int)Time.timeSinceLevelLoad;
         text = "Time: " + currentTime;
         textObject.text = text;
 	}
