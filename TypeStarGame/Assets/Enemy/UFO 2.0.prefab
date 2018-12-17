@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114896998616245308}
   - component: {fileID: 114149910978864096}
   - component: {fileID: 61972184670233408}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UFO Canvas
   m_TagString: UFO
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 61119297239638450}
   - component: {fileID: 50248158170947054}
   - component: {fileID: 114292201191837180}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: UFO 2.0
   m_TagString: UFO
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4073189885389878}
   - component: {fileID: 212855815009763764}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 222528559689891000}
   - component: {fileID: 114697528137095518}
   - component: {fileID: 114296861390799858}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class WordGenerator : MonoBehaviour
 {
-
+    private int currentLevel;
     string[] easyWords = { "Sun", "Rock", "Moon", "Cheese",
                            "Star", "Mars", "Of", "The",
                            "Laser", "Rocket", "Alien", "Robot",
@@ -32,8 +32,21 @@ public class WordGenerator : MonoBehaviour
 
     private void Start()
     {
+        currentLevel = GameObject.Find("LevelHandler").GetComponent<LevelHandler>().CurrentLevel();
+
         textBox = GetComponent<Text>();
-        displayedText = HardRandomWords();
+        if (currentLevel == 1)
+        {
+            displayedText = EasyRandomWords();
+        }
+        else if (currentLevel == 2)
+        {
+            displayedText = MediumRandomWords();
+        }
+        else
+        {
+            displayedText = HardRandomWords();
+        }
         textBox.text = displayedText;
     }
 

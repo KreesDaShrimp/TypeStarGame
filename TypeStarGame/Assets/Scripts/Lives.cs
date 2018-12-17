@@ -32,10 +32,11 @@ public class Lives : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        Debug.Log("Collided!");
-        lives--;
-
-        
+        if (coll.gameObject.tag == "UFO")
+        {
+            Debug.Log("Collided!");
+            lives--;
+        }
     }
 
     void Dest(){
