@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Lives : MonoBehaviour {
 
+    public AudioSource UFOExplosion;
     private int lives = 3;
 
     GameObject li;
@@ -35,6 +36,7 @@ public class Lives : MonoBehaviour {
         if (coll.gameObject.tag == "UFO")
         {
             Debug.Log("Collided!");
+            UFOExplosion.Play();
             lives--;
         }
     }
