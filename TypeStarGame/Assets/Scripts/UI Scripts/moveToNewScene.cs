@@ -11,6 +11,8 @@ public class moveToNewScene : MonoBehaviour
     public Button button;
     public string nextRoom;
 
+    public int setLevel;
+
     // Use this for initialization
     void Start()
     {
@@ -26,7 +28,7 @@ public class moveToNewScene : MonoBehaviour
     //what to do when clicked
     void TaskOnClick()
     {
-
+        LevelData.SetLevel(setLevel);
         SceneManager.LoadScene(nextRoom);
 
     }

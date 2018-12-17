@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class TypeWord : MonoBehaviour
 {
+    [Header("Game Objects")]
     public Text ScoreText;
-    public LevelHandler LevelHandler;
+
+    [Header("Audio")]
     public AudioSource UFOExplosion;
     public AudioSource Typing;
     public AudioSource BadSelect;
@@ -30,7 +32,7 @@ public class TypeWord : MonoBehaviour
 
     private void Start()
     {
-        currentLevel = LevelHandler.CurrentLevel();
+        currentLevel = LevelData.GetLevel();
         wordActivated = false;
     }
 
@@ -74,16 +76,18 @@ public class TypeWord : MonoBehaviour
             }
         }
 
+        // word activated only when the first letter of word is found
         if (wordActivated)
         {
             Text currentText = activeWord.GetComponentInChildren<Text>();
             string currentString = currentText.text;
 
-            currentText.color = typingColor;
+            // set word color to active
 
             //Debug.Log(currentString);
             if (currentString[0] == typedLetter)
             {
+                currentText.color = typingColor;
                 Typing.Play();
                 currentString = currentString.Remove(0, 1);
                 currentText.text = currentString;
@@ -100,6 +104,8 @@ public class TypeWord : MonoBehaviour
             ufoList.Add(collision.gameObject);
         }
     }
+
+    // destroyes ufo and removes it from the list of ufos
     public void DestroyUFO(GameObject ufoToDestroy)
     {
         ufoToDestroy.SetActive(false);
@@ -114,21 +120,29 @@ public class TypeWord : MonoBehaviour
     private void AddScore()
     {
         int incrementScore = 0;
+
+        // score increment based on level
         if (currentLevel == 1)
         {
             incrementScore = level1Score;
         }
+
         else if (currentLevel == 2)
         {
             incrementScore = level2Score;
         }
+
         else
         {
             incrementScore = level3Score;
         }
+
+        // update score on canvas
         score = score + incrementScore;
         ScoreText.text = "Score: " + score.ToString();
     }
+
+    // returns current score
     public int GetScore()
     {
         return score;

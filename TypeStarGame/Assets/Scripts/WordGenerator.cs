@@ -32,7 +32,7 @@ public class WordGenerator : MonoBehaviour
 
     private void Start()
     {
-        currentLevel = GameObject.Find("LevelHandler").GetComponent<LevelHandler>().CurrentLevel();
+        currentLevel = LevelData.GetLevel();
 
         textBox = GetComponent<Text>();
         if (currentLevel == 1)
