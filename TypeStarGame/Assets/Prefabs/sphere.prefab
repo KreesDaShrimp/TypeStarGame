@@ -68,6 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90cfa643b21c48640b9b6970d2ce8975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UFOExplosion: {fileID: 0}
 --- !u!212 &212584028650035190
 SpriteRenderer:
   m_ObjectHideFlags: 1

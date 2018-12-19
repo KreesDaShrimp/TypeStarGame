@@ -28,6 +28,7 @@ public class moveToNewScene : MonoBehaviour
     //what to do when clicked
     void TaskOnClick()
     {
+        Time.timeScale = 1.0f;
         LevelData.SetLevel(setLevel);
         SceneManager.LoadScene(nextRoom);
 

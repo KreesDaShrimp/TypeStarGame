@@ -98,3 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 307f6320b0f06974aa12d2a244c99e7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScoreText: {fileID: 0}
+  UFOExplosion: {fileID: 0}
+  Typing: {fileID: 0}
+  BadSelect: {fileID: 0}
