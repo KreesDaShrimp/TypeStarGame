@@ -9,6 +9,8 @@ public class PauseGame : MonoBehaviour
 {
 
     public Button button;
+    public GameObject pannel;
+
 
     // Use this for initialization
     void Start()
@@ -16,8 +18,7 @@ public class PauseGame : MonoBehaviour
         //sets up button to work with a button object in game
         Button btn = button.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
-        Time.timeScale = 0;
-        Time.timeScale = 1;
+        
 
 
     }
@@ -25,14 +26,12 @@ public class PauseGame : MonoBehaviour
     //what to do when clicked
     void TaskOnClick()
     {
-        Time.timeScale = 0;
+        Time.timeScale = 0.0f;
+        pannel.SetActive(true);
+        button.gameObject.SetActive(false);
 
-        print(Time.timeScale);
+
     }
-    // Update is called once per frame
-    void Update()
-    {
-        //doesn't do anything
-    }
+   
 
 }
