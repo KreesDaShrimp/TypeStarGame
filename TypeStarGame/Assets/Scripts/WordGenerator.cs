@@ -18,7 +18,11 @@ public class WordGenerator : MonoBehaviour
                             "empty","open","space","outer",
                             "deep","day","night","dawn",
                             "dusk","cloud","blue","sound",
-                            "void","white","green","orange"};
+                            "void","white","green","orange",
+                            "north","south","east","west",
+                            "pilot","pod","polar","oxygen",
+                            "osiris","rain","snow","halo",
+                            "Groot","giant","libra","draco"};
 
     string[] mediumWords = { "spaceship", "supernova", "inertia", "Mercury",
                              "Jupiter", "Sputnik", "bebula", "Uranus",
@@ -31,7 +35,11 @@ public class WordGenerator : MonoBehaviour
                              "orbit","sidereal","twinkle","little",
                              "science","infinity","beyond","vacuum",
                              "bolide","bolometer","cehpeid","clusters",
-                             "element","ozone","perigee","phases"};
+                             "element","ozone","perigee","phases",
+                             "shuttle","tempest","torpedo","twilight",
+                             "universe","zodiac","autobots","Avengers",
+                             "barrier","blockade","captain","centauri",
+                             "citadel","blitzar","fighter","frontier"};
 
     string[] difficultWords = { "entropy", "constellation", "Astronomy", "Astrology",
                                 "magnetron", "Xenomorph", "Kryptoniter", "exoplanet",
@@ -48,7 +56,11 @@ public class WordGenerator : MonoBehaviour
                                 "parallax","perturbations","turbulence","photosphere",
                                 "scintillation","selenography","solstice","stratosphere",
                                 "sundial","Terminator","thermocouple","troposphere",
-                                "antimatter","futuristic","interdimensional","circumlunar"};
+                                "antimatter","futuristic","interdimensional","circumlunar",
+                                "Sagittarius","sovereign","stormbreaker","tesseract",
+                                "transmission","xenoarchaeology","starfield","destination",
+                                "extraterrestrial","exploration","engineering","discovery",
+                                "gyroscope","harbinger","helioseismology","longitude"};
     //"","","",""
     string displayedText;
     Text textBox;
