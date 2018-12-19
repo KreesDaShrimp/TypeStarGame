@@ -1066,7 +1066,12 @@ Prefab:
     - target: {fileID: 114068056041235696, guid: 54ebcf9a6b762ce48a68f5a9e4a64734,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114286538957608104, guid: 54ebcf9a6b762ce48a68f5a9e4a64734,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 224945563234591644, guid: 54ebcf9a6b762ce48a68f5a9e4a64734,
         type: 2}
@@ -1281,7 +1286,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 201694496}
+      objectReference: {fileID: 158005234}
     - target: {fileID: 114068056041235696, guid: 54ebcf9a6b762ce48a68f5a9e4a64734,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
@@ -1315,12 +1320,12 @@ Prefab:
     - target: {fileID: 114068056041235696, guid: 54ebcf9a6b762ce48a68f5a9e4a64734,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 114068056041235696, guid: 54ebcf9a6b762ce48a68f5a9e4a64734,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114068056041235696, guid: 54ebcf9a6b762ce48a68f5a9e4a64734,
         type: 2}
@@ -1337,6 +1342,51 @@ Prefab:
       propertyPath: pannel
       value: 
       objectReference: {fileID: 919026646}
+    - target: {fileID: 114147030610456350, guid: 54ebcf9a6b762ce48a68f5a9e4a64734,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 158005234}
+    - target: {fileID: 114147030610456350, guid: 54ebcf9a6b762ce48a68f5a9e4a64734,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 114147030610456350, guid: 54ebcf9a6b762ce48a68f5a9e4a64734,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114286538957608104, guid: 54ebcf9a6b762ce48a68f5a9e4a64734,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114286538957608104, guid: 54ebcf9a6b762ce48a68f5a9e4a64734,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114286538957608104, guid: 54ebcf9a6b762ce48a68f5a9e4a64734,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114286538957608104, guid: 54ebcf9a6b762ce48a68f5a9e4a64734,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 158005234}
+    - target: {fileID: 114286538957608104, guid: 54ebcf9a6b762ce48a68f5a9e4a64734,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 114286538957608104, guid: 54ebcf9a6b762ce48a68f5a9e4a64734,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54ebcf9a6b762ce48a68f5a9e4a64734, type: 2}
   m_IsPrefabAsset: 0
