@@ -147,4 +147,8 @@ public class TypeWord : MonoBehaviour
     {
         return score;
     }
+    public void SetWordActivatedFalse()
+    {
+        wordActivated = false;
+    }
 }

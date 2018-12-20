@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class Lives : MonoBehaviour {
 
     public AudioSource UFOExplosion;
+    private GameObject canvasCollider;
+    private TypeWord typeWordScript;
     private int lives = 3;
 
     GameObject li;
@@ -15,6 +17,8 @@ public class Lives : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        canvasCollider = GameObject.Find("Canvas Collider");
+        typeWordScript = canvasCollider.GetComponent<TypeWord>();
 
         li = GameObject.FindWithTag("Life3");
 
@@ -38,6 +42,7 @@ public class Lives : MonoBehaviour {
             Debug.Log("Collided!");
             UFOExplosion.Play();
             lives--;
+            typeWordScript.SetWordActivatedFalse();
         }
     }
 
