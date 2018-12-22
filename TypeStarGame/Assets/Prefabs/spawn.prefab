@@ -52,9 +52,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd9442e3985bc9e4ab8f18be26497325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ufo: {fileID: 4915253380165930, guid: 20a7757bb22bf7b4789ef65b8df7b345, type: 2}
-  SpawnRate: 8
-  IntialSpawnRate: 1
+  ufo: {fileID: 4938409598190166, guid: 4687cf2a958aec74a8f78ee2e4f6c955, type: 2}
+  maxSpawnInterval: 15
+  minSpawnInterval: 4
+  spawnIncreaseOverTime: 0.01
+  minimumCapInterval: 2
 --- !u!212 &212639032896551898
 SpriteRenderer:
   m_ObjectHideFlags: 1
