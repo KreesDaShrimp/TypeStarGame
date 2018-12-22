@@ -21,5 +21,6 @@ public class Timer : MonoBehaviour {
         currentTime = (int)Time.timeSinceLevelLoad;
         text = "Time: " + currentTime;
         textObject.text = text;
+        LevelData.SetTime(currentTime);
 	}
 }
