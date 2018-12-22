@@ -12,10 +12,8 @@ public class TypeWord : MonoBehaviour
     public AudioSource UFOExplosion;
     public AudioSource Typing;
     public AudioSource BadSelect;
-
-    private Color defaultColor = Color.white;
+    
     private Color typingColor = new Color(0.4f, 0.8f, 1.0f);
-    private Color wrongColor = Color.red;
 
     private int currentLevel;
 
@@ -26,8 +24,9 @@ public class TypeWord : MonoBehaviour
     private bool wordActivated;
 
     private int level1Score = 10;
-    private int level2Score = 25;
-    private int level3Score = 50;
+    private int level2Score = 15;
+    private int level3Score = 20;
+    private int level4Score = 25;
     private int score;
 
     private void Start()
@@ -57,19 +56,12 @@ public class TypeWord : MonoBehaviour
                     Text currentText = ufoList[i].GetComponentInChildren<Text>();
                     if (currentText != null)
                     {
-                        if (currentText.text == "")
-                        {
-                            DestroyUFO(ufoList[i]);
-                        }
-                        else
-                        {
-                            string currentString = currentText.text;
+                        string currentString = currentText.text;
 
-                            if (currentString[0] == typedLetter && !wordActivated)
-                            {
-                                activeWord = ufoList[i];
-                                wordActivated = true;
-                            }
+                        if (currentString[0] == typedLetter && !wordActivated)
+                        {
+                            activeWord = ufoList[i];
+                            wordActivated = true;
                         }
                     }
                 }
@@ -83,8 +75,7 @@ public class TypeWord : MonoBehaviour
             string currentString = currentText.text;
 
             // set word color to active
-
-            //Debug.Log(currentString);
+            
             if (currentString[0] == typedLetter)
             {
                 currentText.color = typingColor;
@@ -92,6 +83,11 @@ public class TypeWord : MonoBehaviour
                 currentString = currentString.Remove(0, 1);
                 currentText.text = currentString;
                 typedLetter = ' ';
+            }
+            
+            if (activeWord.GetComponentInChildren<Text>().text.Length == 1)
+            {
+                DestroyUFO(activeWord);
             }
         }
     }
@@ -110,12 +106,12 @@ public class TypeWord : MonoBehaviour
     {
         ufoToDestroy.SetActive(false);
         ufoList.Remove(ufoToDestroy);
-        Destroy(ufoToDestroy.transform.parent.gameObject);
+        Destroy(ufoToDestroy);
         wordActivated = false;
 
         AddScore();
         UFOExplosion.Play();
-        Debug.Log(GetScore());
+        //Debug.Log(GetScore());
     }
     private void AddScore()
     {
@@ -131,14 +127,19 @@ public class TypeWord : MonoBehaviour
         {
             incrementScore = level2Score;
         }
-
-        else
+        else if (currentLevel == 3)
         {
             incrementScore = level3Score;
+        }
+        else
+        {
+            incrementScore = level4Score;
         }
 
         // update score on canvas
         score = score + incrementScore;
+        LevelData.IncrementNumDestroyed();
+        LevelData.SetScore(score);
         ScoreText.text = "Score: " + score.ToString();
     }
 

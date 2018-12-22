@@ -85,7 +85,6 @@ public class WordGenerator : MonoBehaviour
             displayedText = HardRandomWords();
         }
         textBox.text = displayedText;
-        Debug.Log("Level: "+currentLevel);
     }
 
     private void Update()
