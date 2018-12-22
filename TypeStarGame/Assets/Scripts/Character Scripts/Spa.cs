@@ -9,7 +9,6 @@ public class Spa : MonoBehaviour {
     public float maxSpawnInterval;
     public float minSpawnInterval;
     public float spawnIncreaseOverTime;
-    public float minimumCapInterval;
 
     private float finalSpawnIncrease;
 
@@ -33,7 +32,7 @@ public class Spa : MonoBehaviour {
     // Update is called once per frame
     private void Update()
     {
-        if (minSpawnInterval - finalSpawnIncrease > minimumCapInterval)
+        if (maxSpawnInterval - finalSpawnIncrease > minSpawnInterval)
         {
             finalSpawnIncrease = spawnIncreaseOverTime * LevelData.GetNumDestroyed();
         }
@@ -43,7 +42,7 @@ public class Spa : MonoBehaviour {
             Spawn();
             cooldownTime = 0f;
             initialSpawnTime = Time.timeSinceLevelLoad;
-            randomizedSpawnInterval = Random.Range(minSpawnInterval - finalSpawnIncrease, maxSpawnInterval - finalSpawnIncrease);
+            randomizedSpawnInterval = Random.Range(minSpawnInterval, maxSpawnInterval - finalSpawnIncrease);
             Debug.Log(finalSpawnIncrease);
         }
         cooldownTime = Time.timeSinceLevelLoad - initialSpawnTime;
