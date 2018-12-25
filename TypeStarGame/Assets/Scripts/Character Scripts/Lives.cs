@@ -39,7 +39,7 @@ public class Lives : MonoBehaviour {
     {
         if (coll.gameObject.tag == "UFO")
         {
-            Debug.Log("Collided!");
+            //Debug.Log("Collided!");
             UFOExplosion.Play();
             lives--;
             typeWordScript.SetWordActivatedFalse();
@@ -64,7 +64,6 @@ public class Lives : MonoBehaviour {
         {
 
             Destroy(li2);
-
             SceneManager.LoadScene("Game Over");
 
         }

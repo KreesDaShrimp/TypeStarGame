@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4377899811075414}
   - component: {fileID: 212900319912375178}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,9 +56,9 @@ GameObject:
   - component: {fileID: 223023432632286468}
   - component: {fileID: 114808677880952450}
   - component: {fileID: 114984553083084756}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: UFO Canvas
-  m_TagString: UFO
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 114886597943264382}
   - component: {fileID: 114069889135529026}
   - component: {fileID: 114276247932220250}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}

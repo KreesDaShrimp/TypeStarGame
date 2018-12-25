@@ -24,7 +24,7 @@ Automatic
 Barycentre
 Battleship
 Battlestar
-Black-Hole
+Blackhole
 Boundless
 Broadcast
 Bumblebee
