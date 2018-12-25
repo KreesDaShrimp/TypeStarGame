@@ -30,6 +30,7 @@ public class moveToNewScene : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         LevelData.SetLevel(setLevel);
+        LevelData.SetPaused(false);
         SceneManager.LoadScene(nextRoom);
 
     }

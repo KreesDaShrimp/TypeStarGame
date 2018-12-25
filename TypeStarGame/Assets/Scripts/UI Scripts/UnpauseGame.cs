@@ -16,15 +16,12 @@ public class UnpauseGame : MonoBehaviour
         //sets up button to work with a button object in game
         Button btn = button.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
-
     }
 
     //what to do when clicked
     void TaskOnClick()
     {
         Time.timeScale = 1.0f;
-        
+        LevelData.SetPaused(false);
     }
-   
-
 }

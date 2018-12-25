@@ -8,6 +8,7 @@ public static class LevelData {
     private static int shipsDestroyed;
     private static int score;
     private static int survivalTime;
+    private static bool isPaused = false;
 
     public static void SetLevel(int newLevel)
     {
@@ -55,5 +56,14 @@ public static class LevelData {
     public static int GetTime()
     {
         return survivalTime;
+    }
+
+    public static void SetPaused(bool setPause)
+    {
+        isPaused = setPause;
+    }
+    public static bool GetPaused()
+    {
+        return isPaused;
     }
 }

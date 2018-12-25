@@ -14,6 +14,7 @@ public class Spa : MonoBehaviour {
 
     private float randomizedSpawnInterval;
     private float initialSpawnTime;
+    private float timeSinceLevelLoad;
 
     private float currentTime;
     private float cooldownTime;
@@ -27,25 +28,29 @@ public class Spa : MonoBehaviour {
         spawned = false;
         randomizedSpawnInterval = Random.Range(minSpawnInterval, maxSpawnInterval);
         finalSpawnIncrease = spawnIncreaseOverTime * LevelData.GetNumDestroyed();
+        timeSinceLevelLoad = 0;
     }
 
     // Update is called once per frame
     private void Update()
     {
-        if (maxSpawnInterval - finalSpawnIncrease > minSpawnInterval)
+        if (!LevelData.GetPaused())
         {
-            finalSpawnIncrease = spawnIncreaseOverTime * LevelData.GetNumDestroyed();
+            timeSinceLevelLoad += Time.deltaTime;
+            if (maxSpawnInterval - finalSpawnIncrease > minSpawnInterval)
+            {
+                finalSpawnIncrease = spawnIncreaseOverTime * LevelData.GetNumDestroyed();
+            }
+            if (cooldownTime > randomizedSpawnInterval && !spawned)
+            {
+                spawned = true;
+                Spawn();
+                cooldownTime = 0f;
+                initialSpawnTime = timeSinceLevelLoad;
+                randomizedSpawnInterval = Random.Range(minSpawnInterval, maxSpawnInterval - finalSpawnIncrease);
+            }
+            cooldownTime = timeSinceLevelLoad - initialSpawnTime;
         }
-        if (cooldownTime > randomizedSpawnInterval && !spawned)
-        {
-            spawned = true;
-            Spawn();
-            cooldownTime = 0f;
-            initialSpawnTime = Time.timeSinceLevelLoad;
-            randomizedSpawnInterval = Random.Range(minSpawnInterval, maxSpawnInterval - finalSpawnIncrease);
-            Debug.Log(finalSpawnIncrease);
-        }
-        cooldownTime = Time.timeSinceLevelLoad - initialSpawnTime;
     }
 
     void Spawn()

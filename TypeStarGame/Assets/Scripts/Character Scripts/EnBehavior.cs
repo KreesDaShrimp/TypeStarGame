@@ -18,13 +18,8 @@ public class EnBehavior : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
-
-
-        if(Time.timeScale == 0)
-        {
-        }
-        else
+	void FixedUpdate () {
+        if(!LevelData.GetPaused())
         {
             transform.position = new Vector2(transform.position.x - (speed + finalSpeedIncrease), transform.position.y);
         }

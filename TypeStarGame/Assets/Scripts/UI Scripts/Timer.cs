@@ -5,22 +5,33 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour {
 
-    private int currentTime;
+    private float currentTime;
+    private int printedTime;
     private Text textObject;
     private string text;
+
+    private float timeAtPaused;
 	// Use this for initialization
 	void Start () {
-        currentTime = (int)Time.timeSinceLevelLoad;
+        currentTime = 0;
+        printedTime = (int)currentTime;
         textObject = GetComponent<Text>();
-        text = "Time: " + currentTime;
+        text = "Time: " + printedTime;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        currentTime = (int)Time.timeSinceLevelLoad;
-        text = "Time: " + currentTime;
-        textObject.text = text;
-        LevelData.SetTime(currentTime);
 	}
+    private void FixedUpdate()
+    {
+        if (!LevelData.GetPaused())
+        {
+            currentTime += Time.deltaTime;
+            printedTime = (int)currentTime;
+            text = "Time: " + printedTime;
+            textObject.text = text;
+            LevelData.SetTime(printedTime);
+        }
+    }
 }

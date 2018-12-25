@@ -17,10 +17,9 @@ public class GameOver : MonoBehaviour {
             LevelData.SetNumDestroyed(0);
             LevelData.SetTime(0);
             LevelData.SetScore(0);
+            LevelData.SetPaused(false);
             SceneManager.LoadScene("Main Menu");
 
         }
-
     }
-
 }

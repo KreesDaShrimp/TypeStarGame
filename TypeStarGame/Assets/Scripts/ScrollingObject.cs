@@ -6,8 +6,20 @@ public class ScrollingObject : MonoBehaviour {
     private Rigidbody2D rb2d;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
         rb2d = GetComponent<Rigidbody2D>();
-        rb2d.velocity = new Vector2(GameControl.instance.scrollSpeed, 0);
-	}
+        rb2d.velocity = Vector2.zero;
+    }
+    private void FixedUpdate()
+    {
+        if (!LevelData.GetPaused())
+        {
+            rb2d.velocity = new Vector2(GameControl.instance.scrollSpeed, 0);
+        }
+        else
+        {
+            rb2d.velocity = Vector2.zero;
+        }
+    }
 }

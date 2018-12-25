@@ -18,9 +18,6 @@ public class PauseGame : MonoBehaviour
         //sets up button to work with a button object in game
         Button btn = button.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
-        
-
-
     }
 
     //what to do when clicked
@@ -29,9 +26,6 @@ public class PauseGame : MonoBehaviour
         Time.timeScale = 0.0f;
         pannel.SetActive(true);
         button.gameObject.SetActive(false);
-
-
+        LevelData.SetPaused(true);
     }
-   
-
 }
